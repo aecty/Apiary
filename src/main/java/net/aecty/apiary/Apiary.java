@@ -1,6 +1,7 @@
 package net.aecty.apiary;
 
 import com.mojang.logging.LogUtils;
+import net.aecty.apiary.block.ModBlocks;
 import net.aecty.apiary.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -34,6 +35,7 @@ public class Apiary
         MinecraftForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -53,6 +55,11 @@ public class Apiary
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.HONEY_DIAMOND);
             event.accept(ModItems.HONEY_INGOT);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.HONEY_BLOCK);
+            event.accept(ModBlocks.BEE_BLOCK);
         }
     }
 

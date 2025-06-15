@@ -1,4 +1,7 @@
 {
   "item.apiary.honey_diamond": "Honey Diamond",
-  "item.apiary.honey_ingot": "Honey Ingot"
+  "item.apiary.honey_ingot": "Honey Ingot",
+
+  "block.apiary.honey_block": "Honey Block",
+  "block.apiary.bee_block": "Bee Block"
 }

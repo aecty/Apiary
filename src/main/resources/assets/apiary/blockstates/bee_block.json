@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "apiary:block/bee_block"
+    }
+  }
+}
